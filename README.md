@@ -8,3 +8,8 @@ A simple Hacker News (https://news.ycombinator.com) reader app using Hacker News
 -  Works in either orientation (portrait/landscape)
 -  Use Gradle to build, jCenter/Maven Central for dependencies (no .jar dependencies)
 -  Includes Automated Test
+
+## App has 3 screens
+- Home screen with list of top items displayed in order and can be pulled to refresh.
+- Item screen with list of comments and their replies.
+- WebView screen that takes user to url page by clicking a FloatButton.
