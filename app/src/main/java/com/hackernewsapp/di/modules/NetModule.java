@@ -1,0 +1,50 @@
+package com.hackernewsapp.di.modules;
+
+import android.app.Application;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
+import com.hackernewsapp.Api;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.hackernewsapp.Story.presenter.StoryPresenter;
+import com.hackernewsapp.StoryInterface;
+
+import javax.inject.Singleton;
+
+import dagger.Module;
+import dagger.Provides;
+
+import retrofit.RestAdapter;
+
+import retrofit.converter.GsonConverter;
+
+/**
+ * @author Tosin Onikute.
+ */
+
+@Module
+public class NetModule {
+
+    @Provides
+    @Singleton
+    SharedPreferences providesSharedPreferences(Application application) {
+        return PreferenceManager.getDefaultSharedPreferences(application);
+    }
+
+    @Provides
+    @Singleton
+    RestAdapter provideRestAdapter() {
+        RestAdapter restAdapter = new RestAdapter.Builder()
+                .setEndpoint(Api.BASE_URL)
+                .setConverter(new GsonConverter(new GsonBuilder().create()))
+                //.setLogLevel(RestAdapter.LogLevel.FULL)
+                .build();
+
+        //return restAdapter.create(StoryInterface.class);
+        return restAdapter;
+    }
+
+
+}

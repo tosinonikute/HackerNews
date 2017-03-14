@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "258301019809",
+    "firebase_url": "https://awesome-f8bde.firebaseio.com",
+    "project_id": "awesome-f8bde",
+    "storage_bucket": "awesome-f8bde.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258301019809:android:32e02b384f648701",
+        "android_client_info": {
+          "package_name": "com.foodmenu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258301019809-edg7uu7gbbm4r4b0or1m87iv52g4aa44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVYoGhJPakTpyOKle263CnylEgIw7ryVY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

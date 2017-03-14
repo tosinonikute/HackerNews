@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#d35400"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/call_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_news_small"
+                android:paddingLeft="10dp"
+                android:layout_gravity="left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hacker News"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:paddingLeft="10dp"
+                />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_link"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/layout_comment"
+        android:paddingLeft="16dp"
+        android:paddingTop="70dp">
+
+
+        <TextView
+            android:id="@+id/tv_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="#212121"
+            android:text="Ask HN: Developers with kids, how do you skill up?"
+            />
+
+        <TextView
+            android:id="@+id/tv_post_pretty_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_post_title"
+
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:paddingBottom="2dp"
+            android:singleLine="true"
+            android:textColor="#212121"
+            android:text="news.ycombinator.com"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/layout_comment"
+
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/layout_link"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/layout_link"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="45dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription=""
+            app:srcCompat="@drawable/ic_comment_vector"/>
+
+        <TextView
+            android:id="@+id/tv_post_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#212121"
+            android:text="211"/>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_post_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_link"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="gone"
+        android:text="fdfhu sdufkhdfkds dksufsdkf ukdfh sdkufh dskfhsdf kdsh fksdu fhdskfus dh"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tv_post_summary"
+        android:layout_marginLeft="14dp"
+        android:contentDescription=""
+        android:src="@drawable/ic_fire"
+        />
+
+    <TextView
+        android:id="@+id/tv_post_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_post_summary"
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="2dp"
+        android:text="320p"
+        android:textColor="#212121"/>
+
+
+    <TextView
+        android:id="@+id/tv_post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_post_summary"
+
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/tv_post_point"
+        android:layout_marginTop="2dp"
+        android:textColor="#212121"
+        android:text="23 hours ago"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_post_summary"
+        android:layout_marginTop="35dp"
+        android:background="#cccccc"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <!-- application -->
+    <string name="app_name">Hacker News</string>
+    <string name="app_comments">Comments</string>
+
+    <!-- story list -->
+    <string name="story_title">Ask HN: Developers with kids, how do you skill up?</string>
+    <string name="story_pretty_url">news.ycombinator.com</string>
+    <string name="comment_count">211</string>
+    <string name="story_summary">sample text</string>
+    <string name="fire_content_description">This story has lots of views</string>
+    <string name="story_point">320p</string>
+    <string name="story_point_p">p</string>
+    <string name="story_time">23 hours ago</string>
+    <string name="load_more_items">Loading more items please wait&#8230;</string>
+
+
+    <!-- no connection -->
+    <string name="no_connection_snackbar">No connection !</string>
+    <string name="snackbar_action_retry">Retry</string>
+
+    <!-- discussion -->
+    <string name="story_comments">211 comments</string>
+    <string name="comment_by">By: </string>
+    <string name="comment_text">Any advice for a prospective speaker applicant? I am an educational video game developer (supermathworld.com) and would love to share my experience and insight into the space, especially the intersection of artificial intelligence, education, and simulated worlds</string>
+    <string name="author">ccvannorman</string>
+    <string name="comment_time">55 minutes ago</string>
+    <string name="comment_string">comments</string>
+    <string name="comment_string_one">comment</string>
+    <string name="colorStringIndent">#d35400</string>
+    <string name="no_comment_text">No discussion found! \nPlease come back later :-)</string>
+
+
+
+</resources>

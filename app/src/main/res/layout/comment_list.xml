@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comment_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/relative_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/indent"
+        android:layout_width="8dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/discussion"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/indent"
+        android:textColor="@color/colorGrey"
+        android:text="@string/author"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/author"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/author"
+        android:textColor="@color/colorGrey"
+        android:text="@string/comment_time"
+        />
+
+    <TextView
+        android:id="@+id/the_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/author"
+        android:layout_toRightOf="@id/indent"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorDarkText"
+        tools:text="@string/comment_text"
+        />
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

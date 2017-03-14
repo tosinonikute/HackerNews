@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:text="@string/story_title" />
+
+    <TextView
+        android:id="@+id/header_url"
+        android:textColor="@color/colorCloud"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_title"
+        android:layout_marginTop="10dp"
+        android:ellipsize="middle"
+        android:text="@string/story_pretty_url" />
+
+    <TextView
+        android:id="@+id/header_points"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_url"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/story_point" />
+
+    <TextView
+        android:id="@+id/header_comments"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/header_points"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/header_points"
+        android:text="@string/story_comments" />
+
+    <TextView
+        android:id="@+id/header_time"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/header_points"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/header_comments"
+        android:text="@string/story_time" />
+
+    <TextView
+        android:id="@+id/header_poster"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/header_time"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/comment_by" />
+
+    <TextView
+        android:id="@+id/header_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_points"
+        android:layout_margin="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
