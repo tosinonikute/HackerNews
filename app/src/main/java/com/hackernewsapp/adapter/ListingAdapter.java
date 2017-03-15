@@ -38,7 +38,6 @@ public class ListingAdapter
     ArrayList<String> imageUrlList =  new ArrayList<String>();
     RecyclerView recyclerView;
     private String aTitle;
-    private String storyDirectUrl;
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -106,7 +105,6 @@ public class ListingAdapter
             if (model.getTime() != null) time = model.getTime();
 
         aTitle = title;
-        storyDirectUrl = url;
 
         int tLength = title.length();
         if(tLength >= 80){
@@ -141,7 +139,6 @@ public class ListingAdapter
                 intent.putExtra("position", position);
                 intent.putExtra("mStory", mStory);
                 intent.putExtra("title", aTitle);
-                intent.putExtra("storyDirectUrl", storyDirectUrl);
                 Activity activity = (Activity) v.getContext();
                 activity.startActivityForResult(intent, 500);
                 activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

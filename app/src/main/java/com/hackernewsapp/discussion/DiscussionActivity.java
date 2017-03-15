@@ -4,13 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -18,37 +18,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.gson.GsonBuilder;
 import com.hackernewsapp.BaseApplication;
 import com.hackernewsapp.R;
 import com.hackernewsapp.Story.model.Story;
-import com.hackernewsapp.Story.presenter.StoryPresenter;
 import com.hackernewsapp.StoryInterface;
 import com.hackernewsapp.adapter.DiscussionAdapter;
-import com.hackernewsapp.adapter.ListingAdapter;
 import com.hackernewsapp.discussion.model.Discussion;
 import com.hackernewsapp.discussion.presenter.DiscussionPresenter;
 import com.hackernewsapp.discussion.view.DiscussionView;
-import com.hackernewsapp.util.Logger;
 import com.hackernewsapp.util.Misc;
 import com.hackernewsapp.util.NetworkUtil;
 import com.hackernewsapp.util.ui.MaterialProgressBar;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 import javax.inject.Inject;
 
-import retrofit.RestAdapter;
-import retrofit.converter.GsonConverter;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 public class DiscussionActivity extends AppCompatActivity implements DiscussionView {
@@ -102,7 +88,11 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
             position = extras.getInt("position");
             mStory = (ArrayList<Story>) getIntent().getSerializableExtra("mStory");
             aTitle = extras.getString("title");
-            storyDirectUrl = extras.getString("storyDirectUrl");
+
+            if(mStory != null){
+                storyDirectUrl = mStory.get(position).getUrl();
+            }
+
             if (aTitle != null) {
                 setCollapseToolbar(aTitle);
             }
