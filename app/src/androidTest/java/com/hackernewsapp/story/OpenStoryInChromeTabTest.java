@@ -1,4 +1,4 @@
-package com.hackernewsapp.Story;
+package com.hackernewsapp.story;
 
 
 import android.os.SystemClock;

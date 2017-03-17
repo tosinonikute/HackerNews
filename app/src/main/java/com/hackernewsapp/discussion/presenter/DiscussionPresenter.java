@@ -2,8 +2,7 @@ package com.hackernewsapp.discussion.presenter;
 
 import android.content.Context;
 
-import com.hackernewsapp.Story.model.Story;
-import com.hackernewsapp.Story.view.StoryView;
+import com.hackernewsapp.story.model.Story;
 import com.hackernewsapp.StoryInterface;
 import com.hackernewsapp.discussion.model.Discussion;
 import com.hackernewsapp.discussion.view.DiscussionView;

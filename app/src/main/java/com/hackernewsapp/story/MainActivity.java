@@ -1,4 +1,4 @@
-package com.hackernewsapp.Story;
+package com.hackernewsapp.story;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,43 +8,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.gson.GsonBuilder;
 import com.hackernewsapp.BaseApplication;
 import com.hackernewsapp.Constants;
 import com.hackernewsapp.R;
-import com.hackernewsapp.Story.model.Story;
-import com.hackernewsapp.Story.presenter.StoryPresenter;
-import com.hackernewsapp.Story.presenter.StoryPresenterImpl;
-import com.hackernewsapp.Story.view.StoryView;
+import com.hackernewsapp.story.model.Story;
+import com.hackernewsapp.story.presenter.StoryPresenter;
+import com.hackernewsapp.story.view.StoryView;
 import com.hackernewsapp.StoryInterface;
 import com.hackernewsapp.adapter.ListingAdapter;
-import com.hackernewsapp.di.components.StoryComponent;
 import com.hackernewsapp.util.NetworkUtil;
 import com.hackernewsapp.util.ui.MaterialProgressBar;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
 
-import retrofit.Callback;
-import retrofit.RestAdapter;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
-import retrofit.converter.GsonConverter;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 

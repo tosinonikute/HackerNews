@@ -17,20 +17,15 @@ package com.hackernewsapp.discussion;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.hackernewsapp.R;
-import com.hackernewsapp.Story.model.Story;
 import com.hackernewsapp.util.Misc;
 import com.hackernewsapp.util.ui.MaterialProgressBar;
-
-import java.util.ArrayList;
 
 /**
  * This Activity is used as a fallback when there is no browser installed that supports

@@ -1,31 +1,17 @@
-package com.hackernewsapp.Story.presenter;
+package com.hackernewsapp.story.presenter;
 
 import android.app.Application;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
-import android.widget.AbsListView;
 
 import com.hackernewsapp.Constants;
-import com.hackernewsapp.R;
-import com.hackernewsapp.Story.MainActivity;
-import com.hackernewsapp.Story.model.Story;
-import com.hackernewsapp.Story.view.StoryView;
+import com.hackernewsapp.story.model.Story;
+import com.hackernewsapp.story.view.StoryView;
 import com.hackernewsapp.StoryInterface;
-import com.hackernewsapp.adapter.ListingAdapter;
 import com.hackernewsapp.util.Logger;
-import com.hackernewsapp.util.NetworkUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.inject.Inject;
-
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;

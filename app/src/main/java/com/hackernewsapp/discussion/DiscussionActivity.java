@@ -3,6 +3,7 @@ package com.hackernewsapp.discussion;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -21,12 +22,12 @@ import android.widget.TextView;
 
 import com.hackernewsapp.BaseApplication;
 import com.hackernewsapp.R;
-import com.hackernewsapp.Story.model.Story;
 import com.hackernewsapp.StoryInterface;
 import com.hackernewsapp.adapter.DiscussionAdapter;
 import com.hackernewsapp.discussion.model.Discussion;
 import com.hackernewsapp.discussion.presenter.DiscussionPresenter;
 import com.hackernewsapp.discussion.view.DiscussionView;
+import com.hackernewsapp.story.model.Story;
 import com.hackernewsapp.util.Misc;
 import com.hackernewsapp.util.NetworkUtil;
 import com.hackernewsapp.util.ui.MaterialProgressBar;
@@ -36,6 +37,8 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 
 import rx.subscriptions.CompositeSubscription;
+
+import static com.hackernewsapp.R.id.appbar;
 
 public class DiscussionActivity extends AppCompatActivity implements DiscussionView {
 
@@ -109,13 +112,14 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
         noComment.bringToFront();
         loadView();
 
-
     }
 
     // Initialize the view
     public void init() {
 
         fabButtonSetup();
+
+
         commentLayout = (CoordinatorLayout) findViewById(R.id.main_comment_content);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
         commentRecyclerView = (RecyclerView) findViewById(R.id.comment_recyclerview);
@@ -177,12 +181,13 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
     public void setCollapseToolbar(String title){
 
         collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        layoutComment = (RelativeLayout) findViewById(R.id.layout_comment_header_content);
         collapsingToolbar.setExpandedTitleColor(Color.TRANSPARENT);
         //collapsingToolbar.setTitle(title);
         collapsingToolbar.setTitle("");
-        layoutComment = (RelativeLayout) findViewById(R.id.layout_comment_header_content);
 
-        appBarLayout = (AppBarLayout) findViewById(R.id.appbar);
+
+        appBarLayout = (AppBarLayout) findViewById(appbar);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -198,6 +203,56 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
                 }
             }
         });
+
+        // set app bar layout
+        setAppBarLayout();
+    }
+
+    public void setAppBarLayout(){
+
+        if(mStory != null){
+
+            int orientation=this.getResources().getConfiguration().orientation;
+            if(orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+                int heightDp = 392;
+                int titleLen = 0;
+                int urlLen = 0;
+
+                if(mStory.get(position).getTitle() != null) titleLen = mStory.get(position).getTitle().length();
+                if(mStory.get(position).getUrl() != null) urlLen = mStory.get(position).getUrl().length();
+
+                if (titleLen > 70) {
+                    heightDp = heightDp + 50;
+                }
+
+                if (urlLen > 70) {
+                    heightDp = heightDp + 50;
+                }
+
+                if (titleLen > 50) {
+                    setHeight(heightDp);
+                }
+            }
+        }
+
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            int heightDp = 352;
+            setHeight(heightDp);
+        }
+    }
+
+    public void setHeight(int heightDp){
+        CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams)appBarLayout.getLayoutParams();
+        lp.height = (int)heightDp;
+        appBarLayout.setLayoutParams(new CoordinatorLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, heightDp ));
     }
 
 
@@ -260,6 +315,7 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
             activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

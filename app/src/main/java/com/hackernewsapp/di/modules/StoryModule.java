@@ -3,13 +3,9 @@ package com.hackernewsapp.di.modules;
 
 import android.app.Application;
 
-import com.hackernewsapp.Story.presenter.StoryPresenter;
-import com.hackernewsapp.Story.presenter.StoryPresenterImpl;
-import com.hackernewsapp.Story.view.StoryView;
-import com.hackernewsapp.StoryInterface;
-import com.hackernewsapp.di.scopes.UserScope;
+import com.hackernewsapp.story.presenter.StoryPresenter;
+import com.hackernewsapp.story.presenter.StoryPresenterImpl;
 
-import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 

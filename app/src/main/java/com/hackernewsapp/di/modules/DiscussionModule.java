@@ -2,8 +2,6 @@ package com.hackernewsapp.di.modules;
 
 import android.app.Application;
 
-import com.hackernewsapp.Story.presenter.StoryPresenter;
-import com.hackernewsapp.Story.presenter.StoryPresenterImpl;
 import com.hackernewsapp.discussion.presenter.DiscussionPresenter;
 import com.hackernewsapp.discussion.presenter.DiscussionPresenterImpl;
 

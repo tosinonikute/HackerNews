@@ -2,14 +2,9 @@ package com.hackernewsapp.discussion.presenter;
 
 import android.app.Application;
 import android.content.Context;
-import android.util.Log;
-import android.view.View;
 
-import com.hackernewsapp.Constants;
-import com.hackernewsapp.Story.model.Story;
-import com.hackernewsapp.Story.view.StoryView;
+import com.hackernewsapp.story.model.Story;
 import com.hackernewsapp.StoryInterface;
-import com.hackernewsapp.adapter.DiscussionAdapter;
 import com.hackernewsapp.discussion.model.Discussion;
 import com.hackernewsapp.discussion.view.DiscussionView;
 import com.hackernewsapp.util.Logger;
@@ -19,12 +14,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.inject.Inject;
-
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;

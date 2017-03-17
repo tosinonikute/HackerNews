@@ -1,7 +1,7 @@
-package com.hackernewsapp.Story.presenter;
+package com.hackernewsapp.story.presenter;
 
-import com.hackernewsapp.Story.model.Story;
-import com.hackernewsapp.Story.view.StoryView;
+import com.hackernewsapp.story.model.Story;
+import com.hackernewsapp.story.view.StoryView;
 import com.hackernewsapp.StoryInterface;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package com.hackernewsapp.discussion.view;
 
 import android.view.View;
 
-import com.hackernewsapp.Story.model.Story;
+import com.hackernewsapp.story.model.Story;
 import com.hackernewsapp.discussion.model.Discussion;
 
 import java.util.ArrayList;

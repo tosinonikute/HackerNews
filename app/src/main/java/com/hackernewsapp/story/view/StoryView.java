@@ -1,6 +1,6 @@
-package com.hackernewsapp.Story.view;
+package com.hackernewsapp.story.view;
 
-import com.hackernewsapp.Story.model.Story;
+import com.hackernewsapp.story.model.Story;
 
 import java.util.ArrayList;
 

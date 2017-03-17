@@ -1,4 +1,4 @@
-package com.hackernewsapp.Story.model;
+package com.hackernewsapp.story.model;
 
 import java.util.HashMap;
 import java.util.List;

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 
 import com.hackernewsapp.R;
-import com.hackernewsapp.Story.model.Story;
+import com.hackernewsapp.story.model.Story;
 import com.hackernewsapp.discussion.DiscussionActivity;
 import com.hackernewsapp.util.Logger;
 import com.hackernewsapp.util.Misc;

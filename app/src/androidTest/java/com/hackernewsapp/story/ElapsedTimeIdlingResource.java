@@ -1,4 +1,4 @@
-package com.hackernewsapp.Story;
+package com.hackernewsapp.story;
 
 import android.support.test.espresso.IdlingResource;
 

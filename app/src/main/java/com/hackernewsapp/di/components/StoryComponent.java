@@ -1,9 +1,7 @@
 package com.hackernewsapp.di.components;
 
 
-import com.hackernewsapp.Story.MainActivity;
-import com.hackernewsapp.Story.presenter.StoryPresenter;
-import com.hackernewsapp.Story.view.StoryView;
+import com.hackernewsapp.story.MainActivity;
 import com.hackernewsapp.di.modules.DiscussionModule;
 import com.hackernewsapp.di.modules.RetrofitModule;
 import com.hackernewsapp.di.modules.StoryModule;
