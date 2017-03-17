@@ -84,7 +84,7 @@ dependencies {
     // constraint layout
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
 
-    testCompile "org.mockito:mockito-core:2.+"
+
 
 }
 
