@@ -13,3 +13,11 @@ A simple Hacker News (https://news.ycombinator.com) reader app using Hacker News
 - Home screen with list of top items displayed in order and can be pulled to refresh.
 - Item screen with list of comments and their replies.
 - WebView screen that takes user to url page by clicking a FloatButton.
+
+Screenshots Below: 
+
+<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0003.jpg" align="left" width="260" ></a>
+
+<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0004.jpg" align="left" width="260" ></a>
+
+<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0005.jpg" align="left" width="260" ></a>
