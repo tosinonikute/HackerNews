@@ -2,8 +2,8 @@
 A simple Hacker News (https://news.ycombinator.com) reader app using Hacker News API (https://github.com/HackerNews/API)
 
 +![Get it on Google Play!](https://developer.android.com/images/brand/en_generic_rgb_wo_60.png)
-+
-+[Available on the Google Play Store](https://play.google.com/store/apps/details?id=com.hackernewsapp)
+ +
+ +[Available on the Google Play Store](https://play.google.com/store/apps/details?id=com.hackernewsapp)
 
 -  Support API 9 to 25
 -  Clean, Simple and Minimalist design
