@@ -2,6 +2,8 @@ package com.hackernewsapp.di.modules;
 
 import android.app.Application;
 
+import com.hackernewsapp.discussion.data.DiscussionInteractor;
+import com.hackernewsapp.discussion.data.DiscussionInteractorImpl;
 import com.hackernewsapp.discussion.presenter.DiscussionPresenter;
 import com.hackernewsapp.discussion.presenter.DiscussionPresenterImpl;
 
@@ -21,7 +23,12 @@ public class DiscussionModule {
     }
 
     @Provides
-    public DiscussionPresenter getDiscussionPresenter(){
-        return new DiscussionPresenterImpl(application);
+    public DiscussionPresenter getDiscussionPresenter(DiscussionInteractor discussionInteractor){
+        return new DiscussionPresenterImpl(application, discussionInteractor);
+    }
+
+    @Provides
+    public DiscussionInteractor providesDiscussionInteractor(){
+        return new DiscussionInteractorImpl(application);
     }
 }

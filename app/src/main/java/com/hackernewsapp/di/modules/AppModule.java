@@ -2,6 +2,9 @@ package com.hackernewsapp.di.modules;
 
 import android.app.Application;
 
+import com.hackernewsapp.story.data.StoryInteractor;
+import com.hackernewsapp.story.data.StoryInteractorImpl;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -24,5 +27,10 @@ public class AppModule {
     @Singleton
     Application providesApplication() {
         return mApplication;
+    }
+
+    @Provides
+    StoryInteractor provideDataManager(StoryInteractorImpl appDataManager) {
+        return appDataManager;
     }
 }

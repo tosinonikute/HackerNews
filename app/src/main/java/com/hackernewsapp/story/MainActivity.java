@@ -44,24 +44,20 @@ public class MainActivity extends AppCompatActivity implements StoryView {
     StoryPresenter storyPresenter;
 
     private RelativeLayout storyLayout;
-    private static RecyclerView listRecyclerView;
+    private RecyclerView listRecyclerView;
 
 
-    private static List<Story> storyList;
-
-    private static ListingAdapter adapter;
-
-    private static RelativeLayout bottomLayout;
-    private static LinearLayoutManager mLayoutManager;
+    private List<Story> storyList;
+    private ListingAdapter adapter;
+    private RelativeLayout bottomLayout;
+    private LinearLayoutManager mLayoutManager;
 
     // Variables for scroll listener
     private boolean userScrolled = true;
     int pastVisiblesItems, visibleItemCount, totalItemCount;
 
     private int storiesLoaded = 0;
-
     private int page = 1;
-
     private ArrayList<Long> data = new ArrayList<Long>();
 
     private CompositeSubscription mCompositeSubscription;

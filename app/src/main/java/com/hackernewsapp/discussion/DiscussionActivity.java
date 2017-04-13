@@ -53,10 +53,10 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
     private TextView headerTitle, headerUrl, headerPoints,
             headerComments, headerTime, headerPoster, headerContent;
 
-    private static ArrayList<Discussion> discussionArrayList;
-    private static DiscussionAdapter adapter;
-    private static RecyclerView commentRecyclerView;
-    private static LinearLayoutManager mLayoutManager;
+    private ArrayList<Discussion> discussionArrayList;
+    private DiscussionAdapter adapter;
+    private RecyclerView commentRecyclerView;
+    private LinearLayoutManager mLayoutManager;
     private AppBarLayout appBarLayout;
     private CollapsingToolbarLayout collapsingToolbar;
     private RelativeLayout layoutComment;

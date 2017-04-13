@@ -37,8 +37,6 @@ public class BaseApplication extends Application {
                 .discussionModule(new DiscussionModule(this))
                 .build();
 
-
-
     }
 
     public NetComponent getNetComponent() {

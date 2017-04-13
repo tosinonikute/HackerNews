@@ -33,7 +33,7 @@ import com.hackernewsapp.util.ui.MaterialProgressBar;
  */
 public class WebviewActivity extends AppCompatActivity {
 
-    public static final String EXTRA_URL = "";
+    public String EXTRA_URL = "";
     private String url;
     private MaterialProgressBar progressBar;
 

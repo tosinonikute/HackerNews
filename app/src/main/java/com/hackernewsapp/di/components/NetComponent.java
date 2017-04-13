@@ -2,7 +2,6 @@ package com.hackernewsapp.di.components;
 
 import android.content.SharedPreferences;
 
-
 import com.hackernewsapp.di.modules.AppModule;
 import com.hackernewsapp.di.modules.NetModule;
 
@@ -23,4 +22,5 @@ public interface NetComponent {
     // downstream components need these exposed
     RestAdapter restAdapter();
     SharedPreferences sharedPreferences();
+
 }

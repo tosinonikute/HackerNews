@@ -3,6 +3,8 @@ package com.hackernewsapp.di.modules;
 
 import android.app.Application;
 
+import com.hackernewsapp.story.data.StoryInteractor;
+import com.hackernewsapp.story.data.StoryInteractorImpl;
 import com.hackernewsapp.story.presenter.StoryPresenter;
 import com.hackernewsapp.story.presenter.StoryPresenterImpl;
 
@@ -23,8 +25,13 @@ public class StoryModule {
     }
 
     @Provides
-    public StoryPresenter getStoryPresenter(){
-        return new StoryPresenterImpl(application);
+    public StoryPresenter getStoryPresenter(StoryInteractor storyInteractor){
+        return new StoryPresenterImpl(application, storyInteractor);
+    }
+
+    @Provides
+    public StoryInteractor providesStoryInteractor(){
+        return new StoryInteractorImpl(application);
     }
 
 
