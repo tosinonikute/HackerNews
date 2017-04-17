@@ -28,11 +28,16 @@ import com.hackernewsapp.discussion.model.Discussion;
 import com.hackernewsapp.discussion.presenter.DiscussionPresenter;
 import com.hackernewsapp.discussion.view.DiscussionView;
 import com.hackernewsapp.story.model.Story;
+import com.hackernewsapp.util.Logger;
 import com.hackernewsapp.util.Misc;
 import com.hackernewsapp.util.NetworkUtil;
+import com.hackernewsapp.util.StringUtil;
 import com.hackernewsapp.util.ui.MaterialProgressBar;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -42,7 +47,7 @@ import static com.hackernewsapp.R.id.appbar;
 
 public class DiscussionActivity extends AppCompatActivity implements DiscussionView {
 
-
+    private final Logger logger = Logger.getLogger(getClass());
     private CoordinatorLayout commentLayout;
     private int position;
     private ArrayList<Story> mStory;
@@ -161,6 +166,20 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
         if(story.getTime() != null) time = story.getTime();
         if(story.getDescendants() != null) commentsNo = story.getDescendants();
         if(story.getBy() != null) poster = story.getBy();
+
+        // extract urls to show domain name instead of full url
+        try {
+            URL aURL = new URL(url);
+            String host = aURL.getHost();
+            String protocol = aURL.getProtocol();
+            if(!host.equals(null) && !protocol.equals(null)){
+                url = protocol + "://" + host;
+            }
+
+        } catch(MalformedURLException e){
+            logger.debug(e.getLocalizedMessage());
+        }
+
 
         headerTitle.setText(title);
         headerUrl.setText(url);
