@@ -34,7 +34,9 @@ public interface DiscussionView {
 
     public void fabButtonSetup();
 
-   public void  fabButtonLink(View v);
+    public void fabButtonLink(View v);
+
+    public void shareLink();
 
 
 

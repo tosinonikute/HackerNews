@@ -15,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -335,10 +337,26 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
         }
     }
 
+    public void shareLink() {
+        //sharing implementation here
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "https://news.ycombinator.com/item?id=" + mStory.get(position).getId();
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, aTitle);
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.share_menu, menu);
+        return true;
     }
 
     @Override
@@ -349,6 +367,8 @@ public class DiscussionActivity extends AppCompatActivity implements DiscussionV
             case android.R.id.home:
                 onBackPressed();
                 return true;
+            case R.id.action_share:
+                shareLink();
         }
         return super.onOptionsItemSelected(item);
     }
