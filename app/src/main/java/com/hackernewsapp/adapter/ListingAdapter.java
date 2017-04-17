@@ -24,7 +24,7 @@ import java.util.List;
 
 
 /**
- * Created by tosin on 3/09/2015.
+ * @author Tosin Onikute.
  */
 
 public class ListingAdapter
@@ -118,6 +118,7 @@ public class ListingAdapter
         }
 
 
+
         holder.mStoryTitle.setText(title);
 
         holder.mStoryPrettyUrl.setText(url);
@@ -131,12 +132,14 @@ public class ListingAdapter
             holder.mhotStory.setImageResource(R.drawable.ic_fire_grey);
         }
 
+        logger.debug(String.valueOf(holder.getAdapterPosition()));
+
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
                 Intent intent = new Intent(context, DiscussionActivity.class);
-                intent.putExtra("position", position);
+                intent.putExtra("position", holder.getAdapterPosition());
                 intent.putExtra("mStory", mStory);
                 intent.putExtra("title", aTitle);
                 Activity activity = (Activity) v.getContext();
