@@ -21,8 +21,8 @@ A simple Hacker News (https://news.ycombinator.com) reader app using Hacker News
 
 Screenshots Below: 
 
-<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0003.jpg" align="left" width="260" ></a>
+<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0003.jpg" align="left" width="200" ></a>
 
-<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0004.jpg" align="left" width="260" ></a>
+<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0004.jpg" align="left" width="200" ></a>
 
-<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0005.jpg" align="left" width="260" ></a>
+<a href="#"><img src="https://github.com/tosinonikute/HackerNews/blob/master/images/IMG-20170315-WA0005.jpg" align="left" width="200" ></a>
